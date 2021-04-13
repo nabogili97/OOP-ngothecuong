@@ -1,24 +1,10 @@
 <?php
-    class Category
+    include_once "BaseRow.php";
+    class Category extends BaseRow
     {
-        public $id;
-        public $name;
-   
+    public function __construct()
+    {
 
-    public function __contruct($id,$name)
-    {
-        $this->id = $id;
-        $this->name = $name;
-    }
-
-    public function setId()
-    {
-        $this->id = $id;
-    }
-
-    public function getId()
-    {
-        return $this->id;
     }
  }
 ?>

@@ -1,28 +1,29 @@
 <?php
-
     require "../Emtity/Category.php";
 
-    class CategoryDemo extends Category
+    class CategoryDemo 
     {
-        public function __contruct($id,$name)
+        public function __construct($id,$name)
         {
             $this->id = $id;
             $this->name = $name;
         }
-
+        
         public function createCategory()
         {   
-            $category = array("id" => 1, "name" => "iphone" );
+            $category = new Category();
+            $category = setId("1");
+            $category = setName("San pham ");
         }
 
-        public function printCategoty($id,$name)
+        public function printCategoty($category)
         {
-            foreach($category as $key => $item)
+            if(empty($category))
             {
-                echo " Danh muc co ID : {$item->$id} va Ten danh muc {$item->$name}";
+                echo $category->getId();
+                echo $category->getName();
             }
             
         }
     }
-
 ?>

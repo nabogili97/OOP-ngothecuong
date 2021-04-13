@@ -1,18 +1,10 @@
 <?php 
-    class Accessory
+    include_once "BaseRow.php";
+    class Accessory extends BaseRow
     {
-        public $id;
-        public $name;
-   
-
-    public function setId()
-    {
-        $this->id = $id;
+        public function __construct()
+        {
+            
+        }
     }
-
-    public function getid()
-    {
-        return $this->id;
-    }
- }
 ?>

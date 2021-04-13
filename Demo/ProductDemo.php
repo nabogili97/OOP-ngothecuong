@@ -1,9 +1,9 @@
 <?php
 require '../Emtity/Product.php';
 
-    class ProductDemo extends Product
+    class ProductDemo 
     {
-        public function __contruct($id, $name, $categoryId)
+        public function __construct($id, $name, $categoryId)
         {
             $this->id = $id;
             $this->name = $name;
@@ -12,14 +12,20 @@ require '../Emtity/Product.php';
 
         public function createProductTest()
         {
-            $product = array("id" => 1, "name" => "iphone 12", "categoryId" => 1);
+            $product = new Product();
+            $product = setId("1");
+            $product = setName("San pham ");
+            $product = setcategoryId("1");
             
         }
 
-        public function printProduct($id, $name, $categoryId)
+        public function printProduct($product)
         {
-            foreach ($product as $key => $item) {
-                echo "San pham cos ID : {$item->$id} , Ten san pham : {$item->$name}, Ma danh muc : {$item->$categoryId} ";
+            if(isset($product))
+            {
+                echo $product->getId();
+                echo $product->getName();
+                echo $product->getCategoryId();
             }
         }
     } 

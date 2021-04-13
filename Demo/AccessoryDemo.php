@@ -1,9 +1,9 @@
 <?php
 require "../Emtity/Accessory.php";
 
-    class AccessoryDemo extends Accessory
+    class AccessoryDemo 
     {
-        public function __contruct($id, $name)
+        public function __construct($id, $name)
         {
             $this->id = $id;
             $this->name = $name; 
